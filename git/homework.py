@@ -15,7 +15,11 @@ def is_two_object_has_same_value(first: Any, second: Any) -> bool:
     If @first and @second has same value should return True
     In another case should return False
     """
-    pass
+    if first == second:
+        return  True
+    else:
+        return False
+
 
 
 def is_two_objects_has_same_type(first: Any, second: Any) -> bool:
@@ -23,7 +27,11 @@ def is_two_objects_has_same_type(first: Any, second: Any) -> bool:
     If @first and @second has same type should return True
     In another case should return False
     """
-    pass
+    if type(first) == type(second):
+        return True
+    else:
+        return False
+
 
 
 def is_two_objects_is_the_same_objects(first: Any, second: Any) -> bool:
@@ -31,7 +39,10 @@ def is_two_objects_is_the_same_objects(first: Any, second: Any) -> bool:
     If @first and @second has same type should return True
     In another case should return False
     """
-    pass
+    if type(first) == type(second):
+        return True
+    else:
+        return False
 
 
 def multiple_ints(first_value: int, second_value: int) -> int:
@@ -48,7 +59,18 @@ def multiple_ints(first_value: int, second_value: int) -> int:
     Returns:
         Product of elements
     """
-    pass
+    result = 0
+    if type(first_value) != int or type(second_value) != int:
+        raise ValueError
+    else:
+        for i in first_value:
+            result = result * i
+        for i in second_value:
+            result = result * i
+        return result
+
+
+
 
 
 def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
