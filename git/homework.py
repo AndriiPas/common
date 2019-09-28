@@ -18,8 +18,6 @@ def is_two_object_has_same_value(first: Any, second: Any) -> bool:
     return first == second
 
 
-
-
 def is_two_objects_has_same_type(first: Any, second: Any) -> bool:
     """
     If @first and @second has same type should return True
@@ -28,16 +26,12 @@ def is_two_objects_has_same_type(first: Any, second: Any) -> bool:
     return type(first) == type(second)
 
 
-
-
 def is_two_objects_is_the_same_objects(first: Any, second: Any) -> bool:
     """
     If @first and @second has same type should return True
     In another case should return False
     """
     return first is second
-
-
 
 
 def multiple_ints(first_value: int, second_value: int) -> int:
@@ -55,12 +49,9 @@ def multiple_ints(first_value: int, second_value: int) -> int:
         Product of elements
     """
 
-    if isinstance(first_value,int) and isinstance(second_value,int):
+    if isinstance(first_value, int) and isinstance(second_value, int):
         return first_value * second_value
     raise ValueError
-
-
-
 
 
 def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
@@ -90,13 +81,10 @@ def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
             print("Not valid input data")
         >>> "Not valid input data"
     """
-
-
     try:
         return int(first_value) * int(second_value)
     except Exception:
         raise ValueError("Not valid input data")
-
 
 
 def is_word_in_text(word: str, text: str) -> bool:
@@ -118,18 +106,11 @@ def is_word_in_text(word: str, text: str) -> bool:
     return word in text
 
 
-
 def some_loop_exercise() -> list:
     """
     Use loop to create list that contain int values from 0 to 12 except 6 and 7
     """
-
-
-    return[int (i) for i in range(13) if i not in [6,7]]
-
-
-
-
+    return[int(i) for i in range(13) if i not in [6, 7]]
 
 
 def remove_from_list_all_negative_numbers(data: List[int]) -> list:
@@ -146,7 +127,6 @@ def remove_from_list_all_negative_numbers(data: List[int]) -> list:
         if i >= 0:
             n.append(i)
     return n
-
 
 
 def alphabet() -> dict:
@@ -184,6 +164,7 @@ def test(lst):
 
     return small_index
 
+
 def simple_sort(data: List[int]) -> List[list]:
     """
     Sort list of ints without using built-in methods.
@@ -198,4 +179,3 @@ def simple_sort(data: List[int]) -> List[list]:
         small = test(data)
         newlst.append(data.pop(small))
     return newlst
-
