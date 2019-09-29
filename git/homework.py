@@ -28,10 +28,10 @@ def is_two_objects_has_same_type(first: Any, second: Any) -> bool:
 
 def is_two_objects_is_the_same_objects(first: Any, second: Any) -> bool:
     """
-    If @first and @second has same type should return True
+    If @first and @second has same id should return True
     In another case should return False
     """
-    return type(first) == type(second)
+    return id(first) == id(second)
 
 
 def multiple_ints(first_value: int, second_value: int) -> int:
@@ -135,7 +135,7 @@ def alphabet() -> dict:
     Notes You could see an implementaion of this one in test, but create another one
     Examples:
         alphabet()
-        >>> {"a": 1, "b": 2 ...}
+        >>> { 1: 'a', 2: 'b' ...}
     """
     alph = dict()
     i = 97
@@ -145,12 +145,7 @@ def alphabet() -> dict:
         i += 1
     return alph
 
-    """ 
-    alph = {}
-    for i in range(1, 27):
-        alph[chr(i+96)] = i
-    return alph
-    """
+
 
 
 def test(lst):
