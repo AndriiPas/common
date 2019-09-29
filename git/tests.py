@@ -58,11 +58,11 @@ class TestObjectsComparison(unittest.TestCase):
 
         first_value = [1, 2, 5]
         second_value = [1, 2, 5]
-        self.assertFalse(is_two_objects_is_the_same_objects(first_value, second_value))
+        self.assertTrue(is_two_objects_is_the_same_objects(first_value, second_value))
 
         self.assertFalse(is_two_objects_is_the_same_objects(first_value, 17))
 
-        self.assertFalse(is_two_objects_is_the_same_objects(["Hello", 15, True], ["Hello", 15, True]))
+        self.assertTrue(is_two_objects_is_the_same_objects(["Hello", 15, True], ["Hello", 15, True]))
 
         self.assertFalse(is_two_objects_is_the_same_objects(96, 96.0))
 
