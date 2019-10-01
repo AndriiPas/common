@@ -2,7 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807fe7f6-4bf4-452d-9752-cd851b636dfa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../git/test_from_consol.py" beforeDir="false" afterPath="$PROJECT_DIR$/../git/test_from_consol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/relational_database.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drop_database_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/categories.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/customers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/employees.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/order_details.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/orders.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/products.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/shippers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/fill/suppliers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/categories.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/customers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/employees.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/order_details.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/orders.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/products.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/shippers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/init/suppliers.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_12.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,13 +57,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1RTtwgiXa6F45XYUZDPYZ8wpWZ1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -31,7 +85,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for tests.TestSQLQueries">
+  <component name="RunManager" selected="Python.db">
+    <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="relational_database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="relational_database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/homework.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for tests.TestSQLQueries" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="relational_database" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -60,9 +156,26 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="relational_database" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.db" />
         <item itemvalue="Python tests.Unittests for tests.TestSQLQueries" />
+        <item itemvalue="Python.homework" />
+        <item itemvalue="Python tests.Unittests in tests.py" />
         <item itemvalue="Python tests.Unittests for tests.TestSQLQueries.test_task_1" />
       </list>
     </recent_temporary>
