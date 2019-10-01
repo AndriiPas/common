@@ -1,3 +1,6 @@
+<<<<<<< HEAD
 extensions
 extras
+=======
+>>>>>>> upstream/master
 psycopg2==2.8.1
