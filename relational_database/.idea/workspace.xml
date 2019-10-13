@@ -2,54 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807fe7f6-4bf4-452d-9752-cd851b636dfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/relational_database.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drop_database_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/categories.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/customers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/employees.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/order_details.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/orders.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/products.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/shippers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/fill/suppliers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/categories.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/customers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/employees.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/order_details.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/orders.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/products.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/shippers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/init/suppliers.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_10.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_11.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_12.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_13.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_14.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_15.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_16.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixtures/tests_results/task_9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/init_database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tests/Test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tests/test_1U.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/homework.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/homework_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +28,7 @@
   <component name="ProjectId" id="1RTtwgiXa6F45XYUZDPYZ8wpWZ1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tests" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -173,8 +131,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.db" />
-        <item itemvalue="Python tests.Unittests for tests.TestSQLQueries" />
         <item itemvalue="Python.homework" />
+        <item itemvalue="Python tests.Unittests for tests.TestSQLQueries" />
         <item itemvalue="Python tests.Unittests in tests.py" />
         <item itemvalue="Python tests.Unittests for tests.TestSQLQueries.test_task_1" />
       </list>
