@@ -39,6 +39,7 @@ class Cat:
     """
 
     def __init__(self, age):
+        self.age = age
         pass
 
     def eat(self, product):
@@ -51,6 +52,7 @@ class Cat:
         pass
 
     def _set_average_speed(self):
+
         pass
 
     def run(self, hours):
