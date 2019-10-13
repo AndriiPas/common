@@ -72,6 +72,8 @@ def task_9(lst):
     for i in range(0, len(lst)-1):
         if not isinstance(lst[i], tuple):
             counter += 1
+        else:
+            break
     return counter
 
 
@@ -98,7 +100,8 @@ def task_12(text):
     return counter
 
 
-def task_13(text):
+def task_13():
+    text = input("Input a long string containing multiple words: ")
     result = ' '
     text = text.split()
     text = text[::-1]
@@ -106,10 +109,18 @@ def task_13(text):
     return result
 
 
-def task_14(n):
-    fib = [1, 1]
-    for i in range(2, n):
-        fib.append(fib[i-1] + fib[i-2])
+def task_14():
+    n = input("how many Fibonnaci numbers to generate: ")
+    if n == 0:
+        fib = None
+    elif n == 1:
+        fib = [1]
+    elif n == 2:
+        fib = [1, 1]
+    elif n > 2:
+        fib = [1, 1]
+        for i in range(2, n):
+            fib.append(fib[i-1] + fib[i-2])
     return fib
 
 
@@ -134,8 +145,17 @@ def task_17(numb):
 def task_18(text):
     #res = [chr((ord(i)+1)) for i in text if True]
     res = ''
+    count = 0
     for i in text:
-        res += chr((ord(i)+1))
+        count +=1
+        if ord(i) == 90:
+            res += 'A'
+        elif ord(i) == 122:
+            res += 'A'
+        elif count == len(text):
+            res += chr((ord(i) - 31))
+        else:
+            res += chr((ord(i)+1))
     return res
 
 
@@ -161,4 +181,6 @@ def task_19(data):
 def task_20(num_1, num_2):
     if num_2 > num_1:
         return True
+    elif num_1 == num_2:
+        return ('-1')
     return False

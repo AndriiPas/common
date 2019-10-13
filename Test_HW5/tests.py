@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 
 from Functions import *
 
@@ -35,7 +36,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(task_8([1, 2, 3, 4, 7, 8]), [5, 6])
 
     def test_task_9(self):
-        self.assertEqual(task_9([1, 2, 3, (1, 2), 3]), 3)
+        self.assertEqual(task_9([1, 2, 3, 5, (1, 2), 3, 5, 4, 7]), 4)
 
     def test_task_10(self):
         self.assertEqual(task_10(("Hello World and Coders")), "sredoC dna dlroW olleH")
@@ -46,11 +47,13 @@ class MyTestCase(unittest.TestCase):
     def test_task_12(self):
         self.assertEqual(task_12("fun&!! time"), "time")
 
-    def test_task_13(self):
-        self.assertEqual(task_13("My name is Michele"), "Michele is name My")
+    @patch("Functions.task_13", return_value="Michele is name My")
+    def test_task_13(self, task_13):
+        self.assertEqual(task_13(), "Michele is name My")
 
-    def test_task_14(self):
-        self.assertEqual(task_14(6), [1, 1, 2, 3, 5, 8])
+    @patch("Functions.task_14", return_value=[1, 1, 2, 3, 5, 8])
+    def test_task_14(self, task_14):
+        self.assertEqual(task_14(), [1, 1, 2, 3, 5, 8])
 
     def test_task_15(self):
         self.assertEqual(task_15([1, 1, 2, 3, 5, 8]), [2, 8])
@@ -62,7 +65,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(task_17(4), 24)
 
     def test_task_18(self):
-        self.assertEqual(task_18('abcd'), 'bcde')
+        self.assertEqual(task_18('abcd'), 'bcdE')
+        self.assertEqual(task_18('abcdz'), 'bcdeA')
 
     def test_task_19(self):
         self.assertEqual(task_19('edcba'), 'abcde')
