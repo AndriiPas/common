@@ -58,7 +58,7 @@ class MyTestCase(unittest.TestCase):
         with patch('builtins.input', return_value="My name is Michele"):
             self.assertEqual(task_13(), "Michele is name My")
 
-    @patch("builtins.input", return_value=5)
+    @patch("builtins.input", return_value=6)
     def test_task_14(self, n):
         self.assertEqual(task_14(), [1, 1, 2, 3, 5, 8])
 
