@@ -1,4 +1,8 @@
 class Cat:
+    #age = input('Write age: ')
+    #avarage_speed = None
+    saturation_level = 50
+
     """
     Write Class Cat which will receive age from user
     * Add to class average_speed variable which will get it's values
@@ -40,20 +44,24 @@ class Cat:
 
     def __init__(self, age):
         self.age = age
+        self.average_speed = None
         pass
 
     def eat(self, product):
         pass
 
     def _reduce_saturation_level(self, value):
-        pass
+        self.saturation_level = self.saturation_level - value
+        if self.saturation_level < 0:
+            self.saturation_level = 0
 
     def _increase_saturation_level(self, value):
-        pass
+        self.saturation_level = self.saturation_level + value
+        if self.saturation_level > 100:
+            self.saturation_level = 100
 
-    def _set_average_speed(self):
-
-        pass
+    def _set_average_speed(self, average_speed):
+        self.average_speed = average_speed
 
     def run(self, hours):
         pass
