@@ -53,13 +53,14 @@ class MyTestCase(unittest.TestCase):
     def test_task_12(self):
         self.assertEqual(task_12("fun&!! time"), "time")
 
-    @patch("Functions.input", return_value="My name is Michele")
-    def test_task_13(self, task_13):
-        self.assertTrue(task_13("Michele is name My"))
+    #@patch("", )
+    def test_task_13(self):
+        with patch('builtins.input', return_value="My name is Michele"):
+            self.assertEqual(task_13(), "Michele is name My")
 
-    @patch("Functions.input", return_value=6)
-    def test_task_14(self, task_14):
-        self.assertTrue(task_14([1, 1, 2, 3, 5, 8]))
+    @patch("builtins.input", return_value=5)
+    def test_task_14(self, n):
+        self.assertEqual(task_14(), [1, 1, 2, 3, 5, 8])
 
     def test_task_15(self):
         self.assertEqual(task_15([1, 1, 2, 3, 5, 8]), [2, 8])
