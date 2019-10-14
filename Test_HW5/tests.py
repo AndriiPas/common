@@ -29,6 +29,12 @@ class MyTestCase(unittest.TestCase):
     def test_task_5(self):
         self.assertEqual(task_5([0, 2, 0, 3, 5, 6, 7, 10]), [2, 3, 5, 6, 7, 10, 0, 0])
 
+    def test_task_6_True(self):
+        self.assertTrue(task_6([5, 7, 9, 11]))
+
+    def test_task_6_Falce(self):
+        self.assertFalse(task_6([5, 7, 9, 11, 15]))
+
     def test_task_7(self):
         self.assertEqual(task_7([5, 3, 4, 3, 4, 8]), [5, 8])
 
@@ -47,13 +53,13 @@ class MyTestCase(unittest.TestCase):
     def test_task_12(self):
         self.assertEqual(task_12("fun&!! time"), "time")
 
-    @patch("Functions.task_13", return_value="Michele is name My")
+    @patch("Functions.input", return_value="My name is Michele")
     def test_task_13(self, task_13):
-        self.assertEqual(task_13(), "Michele is name My")
+        self.assertTrue(task_13("Michele is name My"))
 
-    @patch("Functions.task_14", return_value=[1, 1, 2, 3, 5, 8])
+    @patch("Functions.input", return_value=6)
     def test_task_14(self, task_14):
-        self.assertEqual(task_14(), [1, 1, 2, 3, 5, 8])
+        self.assertTrue(task_14([1, 1, 2, 3, 5, 8]))
 
     def test_task_15(self):
         self.assertEqual(task_15([1, 1, 2, 3, 5, 8]), [2, 8])
@@ -66,7 +72,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_task_18(self):
         self.assertEqual(task_18('abcd'), 'bcdE')
-        self.assertEqual(task_18('abcdz'), 'bcdeA')
+        self.assertEqual(task_18('abcdz'), 'bcdEA')
 
     def test_task_19(self):
         self.assertEqual(task_19('edcba'), 'abcde')
