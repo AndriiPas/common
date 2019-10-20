@@ -1,6 +1,3 @@
-import math
-
-
 class Cat:                                         # Cat -  об'єкт класу
     average_speed = 0
     saturation_level = 50                          # Saturation_level  - атрибут класу
@@ -165,7 +162,9 @@ class Wall:
         return self.height * self.width
 
     def number_of_rolls_of_wallpaper(self, roll_width_m, roll_length_m):
-        return math.ceil(self.height * self.width / (roll_length_m * roll_width_m))
+        lines_in_roll = (roll_length_m // self.height)
+        lines_in_width = (self.width // roll_width_m)
+        return lines_in_width / lines_in_roll
 
 
 class Roof:
@@ -321,7 +320,7 @@ class House:
     def create_wall(self, width, height):
         if width == 0 or height == 0:
             raise ValueError('Value must be not 0')
-        if len(self.__walls) > 4:
+        if len(self.__walls) >= 4:
             raise ValueError('Our house can not have more than 4 walls')
         self.__walls.append(Wall(width, height))
 
@@ -385,7 +384,7 @@ class House:
         if roll_width_m == 0 or roll_length_m == 0:
             raise ValueError("Sorry length must be not 0")
         else:
-            return sum([i.number_of_rolls_of_wallpaper(roll_length_m, roll_width_m) for i in self.__walls])
+            return sum([i.number_of_rolls_of_wallpaper(roll_width_m, roll_length_m) for i in self.__walls])
 
     def get_room_square(self):
         """
