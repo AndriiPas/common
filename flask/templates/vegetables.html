@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+{%block vegetables%}
+<ul>
+    {%for vegetables in list%}
+       <li>
+           {%if vegetables == 'beetroot'%}
+           <dfn>{{vegetables}}</dfn>
+           {%else%}
+           {{vegetables}}
+           {%endif%}
+       </li>
+    {%endfor%}
+</ul>
+{%endblock%}
