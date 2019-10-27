@@ -1,10 +1,10 @@
 {%extends "base.html"%}
-{%block fruits%}
+{%block info%}
 <ul>
     {%for fruit in list%}
        <li>
            {%if fruit == 'strawberry'%}
-           <dfn>{{fruit}}</dfn>
+           <font color="red">{{fruit}}</font>
            {%else%}
            {{fruit}}
            {%endif%}
