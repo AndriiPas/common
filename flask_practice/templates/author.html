@@ -16,7 +16,7 @@
   <div class="collapse navbar-collapse" id="basicExampleNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="http://127.0.0.1:5000/">Home
+        <a class="nav-link" href="{{url_for('get_home_page')}}">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -30,12 +30,12 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Dropdown</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="http://127.0.0.1:5000/clock">Alarm clock</a>
-          <a class="dropdown-item" href="http://127.0.0.1:5000/Headphone">Headphones</a>
-          <a class="dropdown-item" href="http://127.0.0.1:5000/ipod">iPod</a>
-          <a class="dropdown-item" href="http://127.0.0.1:5000/calculator">Calculator</a>
-          <a class="dropdown-item" href="http://127.0.0.1:5000/coffeemaker">Coffee maker</a>
-          <a class="dropdown-item" href="http://127.0.0.1:5000/battery_charger">Battery charger</a>
+          <a class="dropdown-item" href="{{url_for('get_clock_page')}}">Alarm clock</a>
+          <a class="dropdown-item" href="{{url_for('get_headphones_page')}}">Headphones</a>
+          <a class="dropdown-item" href="{{url_for('get_ipod_page')}}">iPod</a>
+          <a class="dropdown-item" href="{{url_for('get_calculator_page')}}">Calculator</a>
+          <a class="dropdown-item" href="{{url_for('get_cofeemaker_page')}}">Coffee maker</a>
+          <a class="dropdown-item" href="{{url_for('get_battery_charger_page')}}">Battery charger</a>
         </div>
       </li>
 
