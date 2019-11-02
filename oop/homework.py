@@ -1,5 +1,5 @@
-class Cat:                                         # Cat -  об'єкт класу
-    average_speed = 0
+class Cat:                                         # Cat - клас
+    average_speed = 0                              # cat = Cat() - об'єкт класу
     saturation_level = 50                          # Saturation_level  - атрибут класу
 
     """
@@ -45,12 +45,11 @@ class Cat:                                         # Cat -  об'єкт клас
         self._set_average_speed()                                # Розібратися як воно точно працює
 
     def eat(self, product):                                     # def eat - Метод
-        self.product = product
-        if self.product == 'fodder':
+        if product == 'fodder':
             self._increase_saturation_level(10)
-        if self.product == 'apple':
+        if product == 'apple':
             self._increase_saturation_level(5)
-        if self.product == 'milk':
+        if product == 'milk':
             self._increase_saturation_level(2)
 
     def _reduce_saturation_level(self, value):
@@ -110,10 +109,9 @@ class Cat:                                         # Cat -  об'єкт клас
 
 class Cheetah(Cat):
     def eat(self, product):  # def eat - Метод
-        self.product = product
-        if self.product == 'gazelle':
+        if product == 'gazelle':
             self._increase_saturation_level(30)
-        if self.product == 'rabbit':
+        if product == 'rabbit':
             self._increase_saturation_level(15)
 
     def _set_average_speed(self):
