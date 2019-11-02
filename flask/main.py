@@ -3,11 +3,6 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/base')
-def get_base():
-    return render_template('base.html')
-
-
 @app.route('/home')
 @app.route('/')
 def get_home1():
