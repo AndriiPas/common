@@ -1,0 +1,13 @@
+{% extends "author.html"%}
+{%block elements%}
+<style>
+   .fig {
+    text-align: center;
+   }
+</style>
+<div>
+<h1 align="center">{{title}}</h1>
+<p class="fig"><img src="{{url_for('static', filename='Headphones.jpg')}}" width="650px" height="601px" ></p>
+<p>{{text}}</p>
+</div>
+{%endblock%}
