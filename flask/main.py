@@ -9,10 +9,6 @@ def get_base():
 
 
 @app.route('/home')
-def get_home():
-    return render_template('home.html')
-
-
 @app.route('/')
 def get_home1():
     return render_template('home.html')
