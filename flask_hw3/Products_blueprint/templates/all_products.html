@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {%for name in lenght_json%}
+ <li><a href="#"> {{name}}</a></li>
+    {%endfor%}
+
+    <a href={{url_for('products.get_add_product')}}>Add new product</a>
+</ul>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add</h2>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+<p>
+    {{form.id_.label}} <br>
+    {{form.id_(size = 30)}}
+</p>
+    <p>
+    {{form.name.label}} <br>
+    {{form.name(size = 30)}}
+</p>
+    <p>
+    {{form.description.label}} <br>
+    {{form.description(size = 30)}}
+</p>
+    <p>
+    {{form.img_name.label}} <br>
+    {{form.img_name(size = 30)}}
+</p>
+
+    {{form.price.label}} <br>
+    {{form.price(size = 30)}}
+</p>
+    <p>{{form.add()}}<p>
+</form>
+</body>
+</html>
