@@ -1,0 +1,9 @@
+{% extends "index.html"%}
+{%block elements%}
+<div>
+<h1 align="center">{{title}}</h1>
+<p class="fig"><img src="{{url_for('static', filename='Headphones.jpg')}}" width="650px" height="601px" ></p>
+<p>{{text}}</p>
+    <p>Count of words in text: {{counts_of_word}}</p>
+</div>
+{%endblock%}
