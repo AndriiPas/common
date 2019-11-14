@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html"%}
+{%block elements %}
 <ul>
-    {%for name in lenght_json%}
- <li><a href="#"> {{name}}</a></li>
+    {%for product in products%}
+        {%if product.url_check%}
+            <li>{{product.name}}</li>
+        {%else%}
+            <li><a href="{{url_for('products.get_product', num=product.id)}}"> {{product.name}}</a></li>
+        {%endif%}
     {%endfor%}
-
     <a href={{url_for('products.get_add_product')}}>Add new product</a>
 </ul>
-</body>
-</html>
+{%endblock%}

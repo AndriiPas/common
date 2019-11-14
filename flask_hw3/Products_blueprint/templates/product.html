@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html"%}
+{%block elements %}
 <p>Products</p>
-</body>
-</html>
+<img src="static/{{product.img_name}}">
+<ul><p style="margin-left: 3%"  >
+<li>ID: {{product.id}}</li>
+<li>Name: {{product.name}}</li>
+<li>Description: {{product.description}}</li>
+<li>Price: {{product.price}}</li> </ul></p>
+
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+{%block elements %}
+<p>Products</p>
+<img src="static_sm/{{supermarket.img_name}}">
+<ul><p style="margin-left: 3%"  >
+<li>ID: {{supermarket.id}}</li>
+<li>Name: {{supermarket.name}}</li>
+<li>Location: {{supermarket.description}}</li>
+</ul>
+{%endblock%}

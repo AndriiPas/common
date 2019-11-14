@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{%block elements %}
+<ul>
+    {%for supermarket in supermarkets%}
+        {%if supermarket.url_check%}
+            <li>{{supermarket.name}}</li>
+        {%else%}
+            <li><a href="{{url_for('supermarkets.get_supermarket', num=supermarket.id)}}"> {{supermarket.name}}</a></li>
+        {%endif%}
+    {%endfor%}
+    <a href={{url_for('supermarkets.get_add_supermarket')}}>Add new Supermarket</a>
+</ul>
+{%endblock%}
