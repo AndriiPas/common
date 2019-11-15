@@ -1,11 +1,12 @@
 {% extends "base.html"%}
-{%block main %}
-<style type="main">
+{%block elements %}
+<br>
+<p style="margin-left: 3%">
+   <ul>
+    <li><a href="{{url_for('products.get_all_products')}}">Products</a></li>
 
-</style>
-<br>
-<br>
-<p align="center"><a href="{{url_for('products.get_all_products')}}">Products</a>
-<a href="{{url_for('supermarkets.get_all_supermarket')}}">Supermarket</a></p>
+<li><a href="{{url_for('supermarkets.get_all_supermarket')}}">Supermarket</a></li>
+    </ul>
+</p>
 <br>
 {%endblock%}
