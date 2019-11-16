@@ -2,10 +2,16 @@
 {%block elements %}
 <H1>Supermarkets</H1>
 
+{%if supermarket.img_name %}
+ <img src="{{ url_for('static', filename='' + supermarket.img_name) }}" height="720" width="480">
+{%else%}
+<img src="{{ url_for('static', filename='No_image.png' ) }}" height="300" width="200">
+{%endif%}
 <ul><p style="margin-left: 3%"  >
-<li>ID: {{supermarket.id}}</li>
+
+    <li>ID: {{supermarket.id}}</li>
 <li>Name: {{supermarket.name}}</li>
 <li>Location: {{supermarket.description}}</li>
-    <img src="https://www.123rf.com/photo_93799011_fresh-vegetables-market-madeira-funchal-healthy-nutrition.html">
+
 </ul>
 {%endblock%}

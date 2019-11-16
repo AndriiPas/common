@@ -6,7 +6,7 @@ from werkzeug.utils import redirect, secure_filename
 from Supermarkets_blueprint.supermarkets_list import supermarkets_list
 from Supermarkets_blueprint.form import AddSupermarket
 
-supermarkets = Blueprint('supermarkets', __name__, template_folder='templates', static_folder="static_sm")
+supermarkets = Blueprint('supermarkets', __name__, template_folder='templates', static_folder="static")
 
 
 @supermarkets.route('/supermarket/<num>')
@@ -28,7 +28,7 @@ def get_add_supermarket():
                 img = request.files['file']
                 if img:
                     filename = secure_filename(img.filename)
-                    img.save(os.path.join('Supermarkets_blueprint/static_sm', filename))
+                    img.save(os.path.join('static', filename))
                     img.close()
             data = {
                 'id': uuid.uuid4().hex,
@@ -48,7 +48,7 @@ def get_all_supermarket():
     if request.query_string:
         location = request.args.get('location')
         for i in supermarkets_list:
-            #print(location[1:-1] == i["location"])
+            print(location[1:-1] == i["location"])
             if location[1:-1] == i["location"]:
                 result.append(i)
     else:

@@ -10,7 +10,7 @@ supermarkets_list = [
     {
         "id": '2',
         "name": "Vegetables",
-        "location": "Kiyv",
+        "location": "Odessa",
         "img_name": "23272341-various-fresh-vegetables-in-supermarket.jpg",
 
     }

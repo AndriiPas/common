@@ -29,13 +29,13 @@ def get_add_product():
                 print(img)
                 if img:
                     filename = secure_filename(img.filename)
-                    img.save(os.path.join('Products_blueprint/static', filename))
-                    #img.close()
+                    img.save(os.path.join('static', filename))
+                    img.close()
             data = {
                 'id': uuid.uuid4().hex,
                 'name': form.name.data,
                 'description': form.description.data,
-                'img_name': secure_filename(img.filename),
+                'img_name': secure_filename(img.filename) if img else '',
                 'price': str(form.price.data)
                    }
             products_list.append(data)

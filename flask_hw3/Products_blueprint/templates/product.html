@@ -1,7 +1,11 @@
 {% extends "base.html"%}
 {%block elements %}
 <p>Products</p>
-<img src="static/{{product.img_name}}">
+{%if product.img_name %}
+<img src="{{ url_for('static', filename='' + product.img_name) }}" height="720" width="480">
+{%else%}
+<img src="{{ url_for('static', filename='No_image.png' ) }}" height="300" width="200">
+{%endif%}
 <ul><p style="margin-left: 3%"  >
 <li>ID: {{product.id}}</li>
 <li>Name: {{product.name}}</li>
