@@ -41,7 +41,7 @@ parser = reqparse.RequestParser(bundle_errors=True)
 parser.add_argument('passport_id', type=str, help='String!')
 
 
-class Tenants(Resource):
+class HotelTenants(Resource):
     @marshal_with(structure_tenants)
     def get(self):
         args = parser.parse_args()
@@ -74,4 +74,4 @@ class Tenants(Resource):
         return 'false'
 
 
-api.add_resource(Tenants, "/tenants", "/tenants/<passport_id>")
+api.add_resource(HotelTenants, "/tenants", "/tenants/<passport_id>")
