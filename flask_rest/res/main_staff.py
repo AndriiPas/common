@@ -1,57 +1,61 @@
-from flask import Blueprint, render_template, request, session, abort
-from werkzeug.utils import redirect
-
-from staff.staff_list import staff_list
-from staff.form_staff import StaffForm
-staff = Blueprint('staff', __name__, template_folder='templates', static_folder='static')
+from flask import Blueprint, request, json
+from flask_restful import Api, Resource, fields, marshal_with, reqparse
 
 
-@staff.route('/staff/<name>')
-def get_staff(name):
-    print(name)
-    if name is not '#':
-        count = 0
+staff = Blueprint('staff', __name__)
+api = Api(staff)
+
+
+class Staff:
+    def __init__(self, name, passport_id, position, salary):
+        self.name = name
+        self.passport_id = passport_id
+        self.position = position
+        self.salary = salary
+
+
+structure_staff = {
+    "name": fields.String,
+    "passport_id": fields.Integer,
+    "position": fields.String,
+    "salary": fields.Integer
+}
+
+staff_list = [Staff("Leon", "2906158648", "Administrator", 1200), Staff("Jane", "6958884555", "Waiter", 900)]
+
+parser = reqparse.RequestParser(bundle_errors=True)
+parser.add_argument('passport_id', type=str, help='String!')   #  прийом аргументу з урли
+
+
+class HotelStaff(Resource):
+    @marshal_with(structure_staff)
+    def get(self):
+        args = parser.parse_args()    #присвоюємо аргумент змінній
+        if args["passport_id"]:
+            for i in staff_list:
+                if i.passport_id == args["passport_id"]:
+                    return i
+        return staff_list
+
+    @marshal_with(structure_staff)
+    def patch(self):
+        data = json.loads(request.data)
+        name = data.get('name')
+        passport_id = data.get('passport_id')
+        position = data.get('position')
+        salary = data.get('salary')
         for i in staff_list:
-            if i['name'] == name:
-                staff_list.pop(count)
-            count += 1
-    return render_template("staff.html", list=staff_list)
+            if i.passport_id == passport_id:
+                staff_list.remove(i)
+        staff_list.append(Staff(name, passport_id, position, salary))
 
-
-@staff.route('/info_staff/<name>')
-def get_info_staff(name):
-    for i in staff_list:
-        if i['name'] == name:
-            return render_template("info_staff.html", list=i)
-
-
-@staff.route('/add_staff', methods=['GET', 'POST'])
-def get_add_staff():
-    form = StaffForm()
-    coint = 0
-    if request.query_string:
+    @marshal_with(structure_staff)
+    def delete(self, passport_id):
         for i in staff_list:
-            if i['passportID'] == request.args.get('edit'):
-                data = {
-                    'name': form.name.data,
-                    'passportID': form.passportID.data,
-                    'position': form.position.data,
-                    'salary': form.salary.data
-                }
-                staff_list.pop(coint)
-                staff_list.insert(coint, data)
-            coint += 1
-
-    if request.method == "POST":
-        if form.validate_on_submit():
-            data = {
-                'name': form.name.data,
-                'passportID': form.passportID.data,
-                'position': form.position.data,
-                'salary': form.salary.data
-            }
-            staff_list.append(data)
-            return redirect('/staff')
-    return render_template("add_staff.html", title=StaffForm, form=form)
+            if i.passport_id == passport_id:
+                staff_list.remove(i)
+                break
+        return 'false'
 
 
+api.add_resource(HotelStaff, "/staff", "/staff/<passport_id>")
