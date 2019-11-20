@@ -31,7 +31,7 @@ def get_add_supermarket():
                     img.save(os.path.join('static', filename))
                     img.close()
             data = {
-                'id': uuid.uuid4().hex,
+                'id': uuid.uuid1().hex,
                 'name': form.name.data,
                 'Location': form.location.data,
                 'img_name': secure_filename(img.filename) if img else '',
@@ -55,8 +55,8 @@ def get_all_supermarket():
         result = supermarkets_list
     for supermarket in result:
         if session.get('supermarket' + supermarket['id']):
-            supermarket['url_check'] = True
-    return render_template('all_supermarkets.html', supermarkets=result)
+            session[supermarket['id']] = True
+    return render_template('all_supermarkets.html', supermarkets=result, sess=session)
 
 
 

@@ -32,7 +32,7 @@ def get_add_product():
                     img.save(os.path.join('static', filename))
                     img.close()
             data = {
-                'id': uuid.uuid4().hex,
+                'id': uuid.uuid1().hex,
                 'name': form.name.data,
                 'description': form.description.data,
                 'img_name': secure_filename(img.filename) if img else '',
@@ -54,16 +54,10 @@ def get_all_products():
                 result.append(i)
     else:
         result = products_list
-
+    arg = ''
     for product in result:
         if session.get('product' + product['id']):
-            product['url_check'] = True
-    return render_template('all_products.html', products=result)
+            session[product['id']] = True
+    return render_template('all_products.html', products=result, sess=session)
 
 
-@products.route('/delete-visits')
-def delete_visits():
-    session.clear()
-    for key in session.keys():
-        session.pop(key)
-    return 'Visits deleted'

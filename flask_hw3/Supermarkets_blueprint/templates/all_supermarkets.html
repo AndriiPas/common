@@ -2,7 +2,7 @@
 {%block elements %}
 <ul>
     {%for supermarket in supermarkets%}
-        {%if supermarket.url_check%}
+        {%if sess[supermarket.id]%}
             <li>{{supermarket.name}}</li>
         {%else%}
             <li><a href="{{url_for('supermarkets.get_supermarket', num=supermarket.id)}}"> {{supermarket.name}}</a></li>

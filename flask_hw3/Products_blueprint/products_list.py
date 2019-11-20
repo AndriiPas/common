@@ -3,7 +3,7 @@ products_list =[
         "id": '1',
         "name": "potato",
         "description": "spam spam",
-        "img_name": "potato",
+        "img_name": "potato.jpg",
         "price": "10"
 
     },

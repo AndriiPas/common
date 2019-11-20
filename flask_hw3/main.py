@@ -1,4 +1,5 @@
 from flask import Flask, render_template, session
+from werkzeug.utils import redirect
 
 from Products_blueprint.main_products import products
 from Supermarkets_blueprint.main_supermarket import supermarkets
@@ -7,7 +8,7 @@ app = Flask(__name__)
 app.register_blueprint(products)
 app.register_blueprint(supermarkets)
 app.config['SECRET_KEY'] = 'password'
-
+to_reload = False
 
 @app.route('/')
 def get_home_page():
@@ -17,7 +18,7 @@ def get_home_page():
 @app.route('/delete-visits')
 def delete_visits():
     session.clear()
-    return 'Visits deleted'
+    return redirect('/')
 
 
 @app.errorhandler(404)
