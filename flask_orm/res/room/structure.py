@@ -6,4 +6,5 @@ structure_rooms = {
     "status": fields.String,
     "price": fields.Integer,
     "tenant_id": fields.Integer,
+    "staff_id": fields.String
 }

@@ -16,6 +16,6 @@ class RoomModel(db.Model):
     status = db.Column(db.String)
     price = db.Column(db.Integer)
     tenant_id = db.Column(db.Integer, db.ForeignKey("tenants.number"))
-    staff_id = db.relationship("StaffModel", secondary=association_table, backref=db.backref("staff_id"))
+    staff_id = db.relationship("StaffModel", secondary=association_table, backref=db.backref("room"))
 
 
