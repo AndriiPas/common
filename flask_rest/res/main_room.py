@@ -49,6 +49,16 @@ class HotelRooms(Resource):
         return rooms_list
 
     @marshal_with(structure_rooms)
+    def post(self):
+        data = json.loads(request.data)
+        number = data.get('number')
+        level = data.get('level')
+        status = data.get('status')
+        price = data.get('price')
+        rooms_list.append(Rooms(number, level, status, price))
+
+
+    @marshal_with(structure_rooms)
     def patch(self):
         data = json.loads(request.data)
         number = data.get('number')

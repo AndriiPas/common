@@ -52,6 +52,17 @@ class HotelTenants(Resource):
         return tenants_list
 
     @marshal_with(structure_tenants)
+    def post(self):
+        data = request.json
+        name = data.get('name')
+        passport_id = data.get('passport_id')
+        age = data.get('age')
+        sex = data.get('sex')
+        address = data.get('address')
+        room_number = data.get('room_number')
+        tenants_list.append(Tenants(name, passport_id, age, sex, address, room_number))
+
+    @marshal_with(structure_tenants)
     def patch(self):
         data = request.json
         name = data.get('name')

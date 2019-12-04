@@ -21,7 +21,9 @@ structure_staff = {
     "salary": fields.Integer
 }
 
-staff_list = [Staff("Leon", "2906158648", "Administrator", 1200), Staff("Jane", "6958884555", "Waiter", 900)]
+staff_list = [Staff("Leon", "2906158648", "Administrator", 1200),
+              Staff("Jane", "6958884555", "Waiter", 900)
+              ]
 
 parser = reqparse.RequestParser(bundle_errors=True)
 parser.add_argument('passport_id', type=str, help='String!')   #  прийом аргументу з урли
@@ -36,6 +38,15 @@ class HotelStaff(Resource):
                 if i.passport_id == args["passport_id"]:
                     return i
         return staff_list
+
+    @marshal_with(structure_staff)
+    def post(self):
+        data = json.loads(request.data)
+        name = data.get('name')
+        passport_id = data.get('passport_id')
+        position = data.get('position')
+        salary = data.get('salary')
+        staff_list.append(Staff(name, passport_id, position, salary))
 
     @marshal_with(structure_staff)
     def patch(self):
